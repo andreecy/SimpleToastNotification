@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Toast Notification</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <script src="jquery-3.1.1.min.js"></script>
+
+        <div id="notif-area">
+        </div>
+
+    <div class="center">
+        <h3>SimpleToast</h3>
+        <p><input id="msg" type="text" placeholder="input message here.." onchange="checkval()"></p>
+        <div id="pos-btn" style="display:none">
+            Select toast position
+            <p>
+                <a href="javascript:toast('top-left')" class="btn-primary">top-left</a>
+                <a href="javascript:toast('top-mid')" class="btn-primary">top-mid</a>
+                <a href="javascript:toast('top-right')" class="btn-primary">top-right</a>
+            </p>
+            <p>
+                <a href="javascript:toast('bot-left')" class="btn-primary">bot-left</a>
+                <a href="javascript:toast('bot-mid')" class="btn-primary">bot-mid</a>
+                <a href="javascript:toast('bot-right')" class="btn-primary">bot-right</a>
+            </p>
+        </div>
+    </div>
+
+
+    <script>
+    function checkval(){
+        if(!$("#msg").val()){
+            $("#pos-btn").hide();
+        }else{
+            $("#pos-btn").show();
+        }
+    }
+    </script>
+    <script src="toast.js"></script>
+</body>
+
+</html>
